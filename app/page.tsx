@@ -1,100 +1,105 @@
-import Image from "next/image";
+"use client"
+import About from "@/Components/About";
+import Model from "../Components/Model";
+import { motion } from "framer-motion";
+import { Bebas_Neue } from "next/font/google";
+import { useEffect } from "react";
+
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+const fadeInOnScroll = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = "smooth";
+  }, []);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+  return (
+    <div className="max-w-7xl mx-auto overflow-hidden">
+      <nav className="flex flex-1/2 justify-between mt-5">
+        <button className="font-sans text-2xl">GR</button>
+        <div className="flex items-center space-x-4">
+          <a href="#about">
+            <button className="cursor-pointer hover:text-green-600 hover:scale-105 transition-transform duration-200">
+              About Us
+            </button>
           </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+          <a href="#contact">
+            <button className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-green-600 dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">
+              Contact Us
+            </button>
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </nav>
+
+      <section id="Hero">
+        <motion.div initial="hidden" animate="visible" variants={fadeIn}>
+          <div className="flex flex-1/2 justify-between">
+            <div className="relative h-[400px] w-[300px] mt-35">
+              <div className="absolute inset-0 transform scale-150 model-container">
+                <Model />
+              </div>
+            </div>
+            <div className="mt-25 flex flex-1/2 justify-center max-w-3xl ml-20">
+              <div>
+                <div className={`${bebasNeue.className} text-5xl text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-lime-500`}>
+                  BUG CLEAN POWDER
+                </div>
+                <div className={`${bebasNeue.className}mt-5 break-words text-justify text-gray-300 text-xl mt-5 `}>
+                  BUG CLEAN POWDER is a specialized insect-repellent powder designed to protect livestock from pests like flies, ticks, mosquitoes, and lice. It helps maintain hygiene and prevents infections, ensuring the well-being of animals. To use, mix 3-4 spoons of the powder in lukewarm water, stir well, and apply it to the animal's body, avoiding the face. This effective solution cleans the skin, reduces pest infestations, and keeps livestock comfortable and healthy.
+
+                  <div>
+                    <a href="#about">
+                  <button className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-green-600   dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400 mt-25">
+                  Learn More
+            </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
+      <motion.section
+        id="about"
+        className="mt-30"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeInOnScroll}
+      >
+      <About></About>  
+      </motion.section>
+
+      <motion.section
+        id="contact"
+        className="mt-30"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeInOnScroll}
+      >
+        <p className="mt-4 text-gray-300">
+          Email: support@bugclean.com <br />
+          Phone: +91 98765 43210 <br />
+          Address: 123 Bug Street, Insect City, Earth
+        </p>
+      </motion.section>
+      <footer className="mt-20 py-6 bg-black border-t border-white/10 text-center text-gray-400">
+        &copy; 2025 Bug Clean. All rights reserved.
       </footer>
     </div>
   );
