@@ -16,8 +16,8 @@ function About() {
                   ABOUT US
                 </div>
             </div>
-            <div>
-                
+            <div className='break-words text-justify max-w-2xl mt-5'>
+            At G.R. Industries, we are dedicated to providing high-quality veterinary and livestock care solutions. With a commitment to animal health and well-being, we manufacture and market effective products that help protect livestock from harmful pests like flies, ticks, mosquitoes, crickets, lice, and fleas.Our flagship product, BUG CLEAN POWDER, is formulated with scientifically tested ingredients to ensure the safety and hygiene of farm animals. Designed for topical use, it helps maintain the skin health of livestock by reducing pest infestations effectively.Based in Badi, Udaipur (Rajasthan, India), we strive for excellence in every product we manufacture. With a focus on innovation, safety, and customer satisfaction, G.R. Industries continues to be a trusted name in the veterinary care industry.
             </div>
         </div>
         <div>

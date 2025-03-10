@@ -29,7 +29,7 @@ export default function Home() {
     /* eslint-disable @next/next/no-img-element */
     <div className="max-w-7xl mx-auto overflow-hidden">
       <nav className="flex flex-1/2 justify-between mt-5">
-        <button className="font-sans text-2xl">GR</button>
+        <button className="font-sans text-2xl">GR <span className="text-neutral-400 text-sm">Industries</span></button>
         <div className="flex items-center space-x-4">
           <a href="#about">
             <button className="cursor-pointer hover:text-green-600 hover:scale-105 transition-transform duration-200">
@@ -68,7 +68,7 @@ export default function Home() {
 
                   <div>
                     <a href="#about">
-                  <button className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-green-600   dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400 mt-25">
+                  <button className=" shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-green-600 dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400 mt-25">
                   Learn More
             </button>
                     </a>
@@ -100,14 +100,10 @@ export default function Home() {
         variants={fadeInOnScroll}
       >
         <p className="mt-4 text-gray-300">
-          Email: support@bugclean.com <br />
-          Phone: +91 98765 43210 <br />
-          Address: 123 Bug Street, Insect City, Earth
+          Phone : +91 9414354390 <br />
+          Address : Krishna Complex, Kailash nagar , Badi Udaipur (Rajasthan,India)
         </p>
       </motion.section>
-      <footer className="mt-20 py-6 bg-black border-t border-white/10 text-center text-gray-400">
-        &copy; 2025 Bug Clean. All rights reserved.
-      </footer>
     </div>
     /* eslint-enable @next/next/no-img-element */
   );
