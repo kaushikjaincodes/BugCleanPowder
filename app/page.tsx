@@ -57,9 +57,12 @@ export default function Home() {
                   BUG CLEAN POWDER
                 </div>
                 <div className={`${bebasNeue.className} mt-5 break-words text-justify text-gray-300 text-xl`}>
-                  <p>{
-                  `BUG CLEAN POWDER is a specialized insect-repellent powder designed to protect livestock from pests like flies, ticks, mosquitoes, and lice. It helps maintain hygiene and prevents infections, ensuring the well-being of animals. To use, mix 3-4 spoons of the powder in lukewarm water, stir well, and apply it to the animal's body, avoiding the face. This effective solution cleans the skin, reduces pest infestations, and keeps livestock comfortable and healthy.
-                  `}
+                  <p>
+                  BUG CLEAN POWDER is a specialized insect-repellent powder designed to
+                  provide effective protection against various pests. It ensures the
+                  well-being of animals. To use, mix 3-4 spoons of the powder in lukewarm
+                  water, stir well, and apply it to the animal&#39;s body, avoiding the face.
+                  This effective solution cleans the skin, reduces pest infestations, and keeps livestock comfortable and healthy.
                  </p>
 
                   <div>
