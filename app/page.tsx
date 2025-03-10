@@ -26,6 +26,7 @@ export default function Home() {
   }, []);
 
   return (
+    /* eslint-disable @next/next/no-img-element */
     <div className="max-w-7xl mx-auto overflow-hidden">
       <nav className="flex flex-1/2 justify-between mt-5">
         <button className="font-sans text-2xl">GR</button>
@@ -108,5 +109,6 @@ export default function Home() {
         &copy; 2025 Bug Clean. All rights reserved.
       </footer>
     </div>
+    /* eslint-enable @next/next/no-img-element */
   );
 }
