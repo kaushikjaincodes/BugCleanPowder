@@ -107,7 +107,7 @@ export default function Home() {
             <motion.div variants={slideUp} className="mt-8">
               <a href="#about">
                 <button className="px-8 py-3 bg-white/10 border border-white/20 backdrop-blur-md text-white rounded-full font-bold hover:bg-white/20 transition duration-300">
-                  Learn Morenpm run lint
+                  Learn More
                 </button>
               </a>
             </motion.div>
