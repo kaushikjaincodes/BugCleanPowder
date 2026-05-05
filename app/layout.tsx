@@ -28,10 +28,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         {children}
-      </body>
-      <footer className="mt-20 py-6 bg-black border-t border-white/10 text-center text-gray-400">
-        &copy; 2025 Bug Clean. All rights reserved.
+        <footer className="mt-20 py-6 bg-black border-t border-white/10 text-center text-gray-400">
+        &copy; 2026 GR Industries. All rights reserved.
       </footer>
+      </body>     
     </html>
   );
 }
