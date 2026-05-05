@@ -26,7 +26,7 @@ function Model() {
         {/* Reduced environment light intensity */}
         <Environment preset="studio"/>
   <OrbitControls 
-    //@ts-expect-error
+    //@ts-expect-error can be an error here
     ref={controlsRef}
     enableZoom={true} 
     minDistance={1.5} 
@@ -35,9 +35,9 @@ function Model() {
     autoRotateSpeed={0.5} // Slow initial rotation
     onStart={() => {
       if (controlsRef.current) {
-        //@ts-expect-error
+        //@ts-expect-error can be an error here
         controlsRef.current.autoRotate = true;
-        //@ts-expect-error
+        //@ts-expect-error can be an error here
         controlsRef.current.autoRotateSpeed = 2;
       }
     }}  
