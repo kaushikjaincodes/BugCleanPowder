@@ -29,10 +29,10 @@ const slideInLeft = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
-const slideInRight = {
-  hidden: { opacity: 0, x: 50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
-};
+// const slideInRight = {
+//   hidden: { opacity: 0, x: 50 },
+//   visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
+// };
 
 export default function Home() {
   useEffect(() => {
@@ -101,13 +101,13 @@ export default function Home() {
               variants={slideUp}
               className="mt-6 text-gray-300 text-lg md:text-xl leading-relaxed max-w-lg"
             >
-              A specialized insect-repellent powder designed to provide effective protection against various pests. It ensures the well-being of animals. Mix 3-4 spoons in lukewarm water and apply to the animal's body for a comfortable, healthy livestock.
+              A specialized insect-repellent powder designed to provide effective protection against various pests. It ensures the well-being of animals. Mix 3-4 spoons in lukewarm water and apply to the animal&apos;s body for a comfortable, healthy livestock.
             </motion.p>
 
             <motion.div variants={slideUp} className="mt-8">
               <a href="#about">
                 <button className="px-8 py-3 bg-white/10 border border-white/20 backdrop-blur-md text-white rounded-full font-bold hover:bg-white/20 transition duration-300">
-                  Learn More
+                  Learn Morenpm run lint
                 </button>
               </a>
             </motion.div>

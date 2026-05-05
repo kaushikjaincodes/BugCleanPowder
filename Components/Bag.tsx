@@ -25,7 +25,7 @@ export function Bag(props: React.JSX.IntrinsicAttributes & Mutable<Overwrite<Par
   productTexture.repeat.set(2.5, 1.4);
   productTexture.offset.set(-0.41, 0.1);
 
-  useFrame(({ clock }) => {
+  useFrame(({}) => {
     if (group.current && !userInteracted) {
       group.current.rotation.y += 0.0001; 
     }
