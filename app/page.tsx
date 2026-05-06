@@ -77,8 +77,7 @@ export default function Home() {
             {/* Soft Glow - Locked in the exact center of the column */}
             <div className="absolute bg-green-500/30 blur-[80px] rounded-full w-[250px] h-[250px] md:w-[350px] md:h-[350px]"></div>
             
-            {/* Model Wrapper - Shifted left to counteract the 3D model's built-in right-leaning offset */}
-            <div className="absolute inset-0 w-full h-full flex justify-center items-center transform scale-[1.3] md:scale-[1.25] -translate-x-18 md:-translate-x-20 translate-y-12 md:translate-y-12">
+            <div className="absolute inset-0 w-full h-full flex justify-center items-center">
               <Model />
             </div>
           </motion.div>

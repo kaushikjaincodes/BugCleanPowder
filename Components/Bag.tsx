@@ -10,7 +10,7 @@ export function Bag(props: React.JSX.IntrinsicAttributes & Mutable<Overwrite<Par
   const { nodes } = useGLTF("/3dmodel.glb");
   const [userInteracted, setUserInteracted] = useState(false);
   // Load your product image texture
-  const productTexture = useTexture("/texture.png", (texture) => {
+  const productTexture = useTexture("/texture.webp", (texture) => {
     texture.anisotropy = 16;
     texture.generateMipmaps = true;
     texture.minFilter = THREE.LinearMipmapLinearFilter;
@@ -39,12 +39,12 @@ export function Bag(props: React.JSX.IntrinsicAttributes & Mutable<Overwrite<Par
           map={productTexture}
           side={THREE.DoubleSide}
           transparent={true}
-          alphaTest={0.5}
-          roughness={0.5}
+          alphaTest={0.9}
+          roughness={0}
           metalness={0.05}
-          clearcoat={0.1}
+          clearcoat={0}
           clearcoatRoughness={0.7}
-          envMapIntensity={1.2}
+          envMapIntensity={0.6}
         />
       </mesh>
       
